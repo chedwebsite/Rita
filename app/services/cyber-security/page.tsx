@@ -41,7 +41,7 @@ function Hero() {
           <Reveal><Eyebrow><ShieldCheck size={12} /> RIRI SHIELD · CYBER SECURITY</Eyebrow></Reveal>
           <Reveal className="reveal-delay-1"><h1>Protecting what <span>matters</span></h1></Reveal>
           <Reveal className="reveal-delay-2"><p className="hero-copy">Proactive security that finds and fixes vulnerabilities before criminals do — so your business stays up, compliant and out of the headlines.</p></Reveal>
-          <Reveal className="reveal-delay-3"><div className="hero-actions"><Link className="button" href="#contact">Request a Security Audit <ArrowRight size={18} /></Link><Link className="button button-light" href="#services">Explore Services</Link></div></Reveal>
+          <Reveal className="reveal-delay-3"><div className="hero-actions"><Link className="button" href="/contact">Request a Security Audit <ArrowRight size={18} /></Link><Link className="button button-light" href="#services">Explore Services</Link></div></Reveal>
           <Reveal className="reveal-delay-4"><div className="trust-list"><span><Check size={14} /> 24/7 monitoring</span><span><Check size={14} /> 15-min response</span><span><Check size={14} /> Compliance-ready</span></div></Reveal>
         </div>
         <Reveal className="shield-visual">
@@ -154,7 +154,7 @@ export default function CyberSecurityPage() {
   }, [])
   return (
     <>
-      <Navbar ctaLabel="Request a Security Audit" ctaHref="/#contact" />
+      <Navbar ctaLabel="Request a Security Audit" ctaHref="/contact" />
       <main><Hero /><Approach /><Services /><Compliance /><FAQ /></main>
       <Footer />
     </>

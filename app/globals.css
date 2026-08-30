@@ -2244,3 +2244,458 @@ h3 {
     min-height: 0;
   }
 }
+/* ------------------------------------------------------------------ */
+/* Responsive & premium refinements (appended)                        */
+/* ------------------------------------------------------------------ */
+
+/* Global polish — accessible focus, anchor offsets, selection        */
+section[id] {
+  scroll-margin-top: 84px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
+
+a,
+button,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* Tablet (opts out of the <=760 mobile menu so it can't conflict)    */
+@media (min-width: 761px) and (max-width: 1024px) {
+
+  .container {
+    width: min(100% - 2.5rem, 1080px);
+  }
+
+  .nav-links {
+    gap: 22px;
+  }
+
+  /* Home / shared stats */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 18px;
+  }
+
+  .about-grid {
+    gap: 44px;
+  }
+
+  .image-frame {
+    height: 340px;
+  }
+
+  .services-grid,
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* 4-col processes -> 2 */
+  .process-grid,
+  .security-process-grid,
+  .hr-process-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .process-arrow,
+  .security-process-arrow,
+  .hr-process-arrow {
+    display: none;
+  }
+
+  /* 3-col services / pricing / offers -> 2 */
+  .offer-grid,
+  .pricing-grid,
+  .security-services-grid,
+  .hr-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .security-story-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  /* 4-col work / resources -> 2 */
+  .work-grid,
+  .hr-resources-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Pricing featured lift reads oddly in 2-col; flatten it */
+  .price-card.featured {
+    transform: none;
+  }
+
+  /* Footer 2-up on tablet */
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px 28px;
+  }
+
+  .footer-grid > div:first-child,
+  .footer-grid > div:last-child {
+    grid-column: span 2;
+  }
+
+  /* Security hero */
+  .security-hero-content {
+    gap: 34px;
+  }
+
+  .shield-visual {
+    transform: scale(.82);
+  }
+
+  .security-orbit-one {
+    right: 3%;
+  }
+
+  /* Testimonials breathe better */
+  .testimonial-wrap {
+    gap: 12px;
+  }
+
+  .testimonial-wrap blockquote {
+    padding: 30px 26px;
+  }
+}
+/* Mobile refinements — touch-friendly services menu & anchor offsets */
+@media (max-width: 760px) {
+
+  section[id] {
+    scroll-margin-top: 70px;
+  }
+
+  /* Full-width, evenly stacked hero buttons */
+  .hero-actions .button {
+    width: 100%;
+    max-width: 290px;
+  }
+
+  /* Prevent testimonial arrows overlapping on narrow phones */
+  .testimonial-wrap {
+    gap: 6px;
+  }
+
+  .circle-button {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+  }
+}
+
+/* Small phones */
+@media (max-width: 520px) {
+
+  .container {
+    width: min(100% - 1.5rem, 560px);
+  }
+
+  .site-nav {
+    height: 60px;
+  }
+
+  .logo {
+    font-size: 16px;
+  }
+
+  .logo-mark {
+    font-size: 17px;
+  }
+
+  .nav-links {
+    top: 60px;
+  }
+
+  .hero {
+    min-height: 600px;
+  }
+
+  .hero-content {
+    padding: 56px 0 28px;
+  }
+
+  .hero-copy {
+    font-size: 14.5px;
+  }
+
+  .trust-list {
+    gap: 10px;
+    margin-top: 26px;
+  }
+
+  .stats {
+    padding: 38px 0;
+  }
+
+  .stat strong {
+    font-size: 30px;
+  }
+
+  .section {
+    padding: 68px 0;
+  }
+
+  .section-heading {
+    margin-bottom: 32px;
+  }
+
+  .image-frame {
+    height: 240px;
+  }
+
+  .experience-badge {
+    right: 4px;
+    padding: 10px 14px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-grid > div:first-child,
+  .footer-grid > div:last-child {
+    grid-column: span 1;
+  }
+
+  .testimonial-wrap blockquote {
+    padding: 24px 18px;
+  }
+
+  .contact-form-wrap {
+    padding: 20px 16px;
+  }
+
+  .contact-hero {
+    min-height: 340px;
+  }
+
+  .contact-hero-content {
+    padding: 56px 0 40px;
+  }
+
+  .ghost-hero,
+  .ghost-hero-content {
+    min-height: 620px;
+  }
+
+  .ghost-hero-content,
+  .hr-hero-content {
+    padding: 64px 0 34px;
+  }
+
+  .price-card {
+    padding: 26px 22px;
+  }
+
+  .security-hero-content {
+    min-height: 620px;
+  }
+
+  .shield-visual {
+    transform: scale(.62);
+  }
+
+  .hr-hero,
+  .hr-hero-content {
+    min-height: 620px;
+  }
+}
+/* ------------------------------------------------------------------ */
+/* Collapsible navbar menu (mobile & tablet)                           */
+/* ------------------------------------------------------------------ */
+
+/* Toggle button — visible on mobile & tablet only */
+.menu-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  background: #fff;
+  color: var(--foreground);
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Drop target: attaches right under the sticky header and spans the
+   full width of the container (wider than a sidebar drawer). */
+.mobile-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 45;
+  background: #fff;
+  border-top: 1px solid var(--border);
+  box-shadow: 0 24px 40px rgba(16, 0, 31, 0.12);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.25s ease, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.25s;
+  max-height: calc(100vh - 72px);
+  overflow-y: auto;
+}
+
+.mobile-menu.open {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+.mobile-menu-inner {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 0 20px;
+}
+
+.mobile-menu-inner > a,
+.mobile-service-toggle {
+  width: 100%;
+  border: 0;
+  background: none;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 2px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--foreground);
+  border-bottom: 1px solid var(--border);
+  transition: color 0.18s;
+}
+
+.mobile-menu-inner > a:active,
+.mobile-service-toggle:active {
+  color: var(--primary);
+}
+
+.mobile-service-toggle svg {
+  color: var(--muted);
+  transition: transform 0.25s;
+}
+
+.mobile-service-toggle.active svg {
+  transform: rotate(180deg);
+  color: var(--primary);
+}
+
+/* Accordion body (animated height) */
+.mobile-service-body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mobile-service-body.open {
+  grid-template-rows: 1fr;
+}
+
+.mobile-service-links {
+  overflow: hidden;
+  padding: 8px 0 4px;
+}
+
+.mobile-service-links a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 14px;
+  margin-top: 8px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #f7f8fc;
+  transition: border-color 0.18s, background 0.18s, transform 0.18s;
+}
+
+.mobile-service-links a:hover,
+.mobile-service-links a:active {
+  border-color: #bfa6f4;
+  background: #f2edff;
+  transform: translateX(3px);
+}
+
+.mobile-service-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.mobile-service-tag {
+  flex: none;
+  color: var(--primary);
+  background: #e9e0ff;
+  padding: 3px 9px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.mobile-menu-cta {
+  margin-top: 18px;
+}
+
+.mobile-menu-cta .button {
+  width: 100%;
+  justify-content: center;
+  padding: 15px 20px;
+}
+
+/* Mobile & tablet: show toggle, collapse links list, show CTA in menu */
+@media (max-width: 1024px) {
+
+  .nav-links {
+    display: none;
+  }
+
+  .menu-button {
+    display: flex;
+  }
+}
+
+/* Desktop: hide toggle & menu panel, show centered links */
+@media (min-width: 1025px) {
+
+  .menu-button,
+  .mobile-menu {
+    display: none;
+  }
+}
+
+/* Extra-small phones: tightened spacing + hide top-bar CTA */
+@media (max-width: 760px) {
+
+  .nav-cta {
+    display: none;
+  }
+
+  .mobile-menu {
+    max-height: calc(100vh - 60px);
+  }
+}

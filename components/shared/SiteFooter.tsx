@@ -62,11 +62,11 @@ export function SiteFooter() {
             <h4>Contact</h4>
             <p className="contact-line"><MapPin size={15} /> 1200 Corporate Plaza, Suite 400<br />Austin, TX 78701</p>
             <p className="contact-line"><Phone size={15} /> +1 (512) 555-0134</p>
-            <p className="contact-line"><Mail size={15} /> hello@veridiangroup.com</p>
+            <p className="contact-line"><Mail size={15} /> hello@ririgroup.com</p>
           </div>
         </div>
         <div className="footer-bottom">
-          <span>© 2026 Veridian Group. All rights reserved.</span>
+          <span>© 2026 RIRI Group. All rights reserved.</span>
           <span>
             <Link href="/contact">Privacy Policy</Link>
             <Link href="/contact">Terms of Service</Link>

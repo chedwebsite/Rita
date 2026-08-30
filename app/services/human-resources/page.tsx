@@ -45,7 +45,7 @@ function Hero() {
         <Reveal><Eyebrow>RIRI PEOPLE · HUMAN RESOURCES</Eyebrow></Reveal>
         <Reveal className="reveal-delay-1"><h1>People-first <span>for</span><br />growing teams</h1></Reveal>
         <Reveal className="reveal-delay-2"><p className="hero-copy">Recruitment, payroll, compliance, training and culture — handled by senior HR consultants who put your people at the heart of everything.</p></Reveal>
-        <Reveal className="reveal-delay-3"><div className="hero-actions"><Link className="button" href="#contact">Talk to an HR Consultant <ArrowRight size={18} /></Link><Link className="button button-light" href="#careers">See Open Roles</Link></div></Reveal>
+        <Reveal className="reveal-delay-3"><div className="hero-actions"><Link className="button" href="/contact">Talk to an HR Consultant <ArrowRight size={18} /></Link><Link className="button button-light" href="#careers">See Open Roles</Link></div></Reveal>
         <Reveal className="reveal-delay-4"><div className="trust-list"><span><Check size={14} /> Compliance-first</span><span><Check size={14} /> Senior consultants</span><span><Check size={14} /> Scalable support</span></div></Reveal>
       </div>
     </section>
@@ -185,7 +185,7 @@ export default function HumanResourcesPage() {
     <>
       <Navbar
         ctaLabel="Talk to an HR Consultant"
-        ctaHref="#contact"
+        ctaHref="/contact"
         extraLinks={[{ label: 'Careers', href: '#careers' }, { label: 'Resources', href: '#resources' }]}
       />
       <main><Hero /><Services /><Process /><Resources /><Careers /><FAQ /></main>
